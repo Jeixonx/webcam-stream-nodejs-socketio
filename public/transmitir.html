@@ -51,6 +51,9 @@
       {
         navigator.getUserMedia({video : true},loadCam,loadFail);
       }
+      setInterval(function(){
+        viewVideo(video,context);
+      },60);
     });
 
   </script>
