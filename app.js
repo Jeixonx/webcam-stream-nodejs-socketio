@@ -16,14 +16,11 @@ app.get('/',function(req,res){
 });
 
 io.on('connection',function(socket){
-
   socket.on('stream',function(image){
     socket.broadcast.emit('stream',image);
   });
-
 });
 
 http.listen(port,function(){
     log.info('Servidor escuchando por el puerto %s',port);
-
 });
