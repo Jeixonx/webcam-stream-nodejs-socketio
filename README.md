@@ -33,4 +33,4 @@ nodemon app.js
 ```
 
 Then in the web browser go to:
-<http://172.0.0.1:3000>
+<http://127.0.0.1:3000>
