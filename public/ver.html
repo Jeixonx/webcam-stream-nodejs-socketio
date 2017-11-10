@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>ver camara</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+</head>
+</head>
+<body>
+  <img id="play">
+  <div id="logger"></div>
+
+  <script>
+    var socket = io();
+    socket.on('stream',function(image){
+      var img = document.getElementById("play");
+      img.src = image;
+      var log = document.getElementById("logger");
+      $("#logger").text(image);
+    });
+  </script>
+</body>
+</html>
